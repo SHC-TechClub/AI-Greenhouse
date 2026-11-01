@@ -3,7 +3,7 @@ title: "AI Greenhouse Event Page"
 programme: "AI Greenhouse"
 organisation: "SHC Tech Club"
 timezone: "Asia/Hong_Kong (UTC+08:00)"
-last_updated: "2026-10-26T17:10:00+08:00"
+last_updated: "2026-11-02T00:52:06+08:00"
 updated_by: "Carson Ching"
 ---
 
@@ -25,7 +25,7 @@ Published on Cloudflare by Carson. Following the manual restructure, the static 
 - `site.js`: activates form links when valid HTTPS URLs are configured.
 - `assets/shun-hing-college-logo.png`: Shun Hing College logo displayed in the page header.
 
-LEARN concluded on 7 October 2026. BUILD applications closed on 26 October 2026. BUILD remains the first carousel banner. Both BUILD application URLs in `config.js` are cleared, and the hero, BUILD card, and Registration & Apply menu show grey, disabled buttons labelled closed. The proposal-template button is no longer on the card. The public download URL still works for people who already have it: [https://ai-greenhouse.shc-tech-club.workers.dev/download/BUILD_application_template.md](https://ai-greenhouse.shc-tech-club.workers.dev/download/BUILD_application_template.md). `worker.js` runs first only for `/download/*`. It reads `assets/BUILD_application_template.md` and responds with `Content-Disposition: attachment`. Pages, CSS, JavaScript, images, and `/assets/*` stay on Static Assets. Opening `/assets/BUILD_application_template.md` still displays the file. The page itself collects no participant data. Individual team meetings are not shown. SHARE has separate presenter and audience placeholders until those registration links are available. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
+LEARN concluded on 7 October 2026. BUILD applications closed on 26 October 2026. The first carousel banner announces the postponement of BUILD support, co-working sessions, subsidy arrangements and SHARE Demo Day to Semester 2. In-person meetups are planned for the start of the semester; revised dates remain unconfirmed. Applications remain closed. The cards and FAQs reflect the same timing, and participants may build independently or wait until the programme resumes. Both BUILD application URLs in `config.js` are cleared, and the hero, BUILD card, and Registration & Apply menu show grey, disabled buttons labelled closed. The proposal-template button is no longer on the card. The public download URL still works for people who already have it: [https://ai-greenhouse.shc-tech-club.workers.dev/download/BUILD_application_template.md](https://ai-greenhouse.shc-tech-club.workers.dev/download/BUILD_application_template.md). `worker.js` runs first only for `/download/*`. It reads `assets/BUILD_application_template.md` and responds with `Content-Disposition: attachment`. Pages, CSS, JavaScript, images, and `/assets/*` stay on Static Assets. Opening `/assets/BUILD_application_template.md` still displays the file. The page itself collects no participant data. Individual team meetings are not shown. SHARE has separate presenter and audience placeholders until those registration links are available. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
 
 When each deadline passes, close the external form and update the page/button label; there is no automatic deadline enforcement.
 
@@ -42,3 +42,7 @@ The demo was archived after LEARN on 8 October 2026. Its pages, scripts, styles 
 The LEARN workshop-details panel reflects the latest Redesigned guest deck: Plan, Act, Verify, webpage and planner examples, prompting, testing, and privacy. The panel omits presenter names and individual segment times. The overall event time remains 8:00–9:30 pm. See the current deck record in `../Programme/LEARN/Speaker-Materials/`.
 
 BUILD details have two pages: experience and project categories, followed by AI subsidy selection criteria. The main card shows that applications are closed. The criteria concern subsidy consideration, not admission to BUILD.
+
+## OneDrive checkout permissions
+
+The local checkout uses `core.filemode=false` because the synced filesystem reports executable flags on ordinary static files. Tracked file contents and repository file modes are preserved; permission-only differences are ignored locally.
